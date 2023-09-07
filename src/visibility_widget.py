@@ -147,6 +147,7 @@ class Vis_Chart(QWidget):
         time_axis_x.setTitleBrush(axisBrush)
         time_axis_x.setLabelsBrush(axisBrush)
         time_axis_x.setTickCount(7)
+        time_axis_x.setGridLinePen(QPen(QColor("gray")))  
         self.chart.addAxis(time_axis_x, Qt.AlignBottom)
 
         self.vis_series.attachAxis(time_axis_x)
@@ -161,6 +162,7 @@ class Vis_Chart(QWidget):
         cur_axis_y.setLabelsBrush(axisBrush)
         cur_axis_y.setRange(0, 25)
         cur_axis_y.setTickCount(6)
+        cur_axis_y.setGridLinePen(QPen(QColor("gray")))
         self.chart.addAxis(cur_axis_y, Qt.AlignLeft)
         self.vis_series.attachAxis(cur_axis_y)
         # self.vis_scatter.attachAxis(cur_axis_y)

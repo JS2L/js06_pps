@@ -13,12 +13,10 @@ from scipy.optimize import curve_fit
 # import PyQt5
 # print(PyQt5.__version__)
 from PyQt5.QtGui import QPixmap, QImage, QPainter, QBrush, QColor, QPen, QImage, QPixmap, QIcon, QFont
-from PyQt5.QtWidgets import QMainWindow, QApplication, QDesktopWidget, QVBoxLayout, QWidget, QLabel, QInputDialog, QDialog, QTableWidgetItem, QHeaderView, QFileDialog, QMessageBox
+from PyQt5.QtWidgets import QMainWindow, QApplication, QDesktopWidget, QVBoxLayout, QWidget, QLabel, QInputDialog, QDialog, QTableWidgetItem, QHeaderView, QFileDialog, QMessageBox, QGraphicsDropShadowEffect, QVBoxLayout
 from PyQt5.QtCore import QPoint, QRect, Qt, QRectF, QSize, QCoreApplication, pyqtSlot, QTimer, QUrl
 from PyQt5 import uic
-
 from PyQt5.QtChart import QChart, QChartView, QLineSeries, QValueAxis
-
 import target_info
 import save_path_info
 
@@ -32,7 +30,7 @@ class JS06_Setting_Widget(QDialog):
         ui_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                "ui/js06_settings.ui")
         uic.loadUi(ui_path, self)
-        
+
         self.begin = QPoint()
         self.end = QPoint()
         self.qt_img = QPixmap()
@@ -64,6 +62,7 @@ class JS06_Setting_Widget(QDialog):
         self.rtsp_path = None
         self.logger = js06_log.CreateLogger(__name__)
         self.logger.info('Setup window initialization complete')
+        
         
         self.running_ave_checked = run_ave_flag
         
@@ -140,7 +139,20 @@ class JS06_Setting_Widget(QDialog):
         self.one_radio_btn.clicked.connect(self.running_avr_time_settings_function)
         self.five_radio_btn.clicked.connect(self.running_avr_time_settings_function)
         self.ten_radio_btn.clicked.connect(self.running_avr_time_settings_function)
-    
+
+        # 그림자 효과를 적용할 위젯들을 리스트로 저장
+        widgets_to_apply_shadow = [self.alpha_value, self.runaver_value]
+
+        # 반복문을 사용하여 그림자 효과를 적용
+        for widget in widgets_to_apply_shadow:
+            self.apply_shadow(widget)
+
+    def apply_shadow(self, widget):
+        shadow = QGraphicsDropShadowEffect()
+        shadow.setBlurRadius(10)  # 그림자의 흐림 정도를 조절합니다.
+        shadow.setColor(QColor(0, 0, 0, 150))  # 그림자의 색상을 조절합니다.
+        shadow.setOffset(0, 0)  # 그림자의 X와 Y 오프셋을 조절합니다.
+        widget.setGraphicsEffect(shadow)
 
     # path_setting
     def data_path_folder_open(self):
@@ -226,7 +238,7 @@ class JS06_Setting_Widget(QDialog):
         font = QFont()
         font.setPixelSize(20)        
         font.setBold(3)
-        chart.setTitleFont(font)
+        chart.setTitleFont(QFont("Arial", 12, QFont.Bold))
         chart.setTitleBrush(QBrush(QColor("white")))
         chart.setAnimationOptions(QChart.SeriesAnimations)
         chart.layout().setContentsMargins(0,0,0,0)
@@ -244,8 +256,16 @@ class JS06_Setting_Widget(QDialog):
         axis_x.setTitleText("Distance(km)")
         axis_x.setRange(0,50)        
         axis_x.setLabelsBrush(axisBrush)
-        axis_x.setTitleBrush(axisBrush)     
-        chart.addAxis(axis_x, Qt.AlignBottom)        
+        axis_x.setTitleBrush(axisBrush)
+        axis_x.setGridLinePen(QPen(QColor("gray")))   
+
+        # 아래쪽 선의 스타일 변경
+        line_pen_x = axis_x.linePen()
+        line_pen_x.setColor(QColor("white"))  # 선의 색상을 변경할 수 있습니다.
+        line_pen_x.setWidth(2)  # 선의 굵기를 변경할 수 있습니다.
+        axis_x.setLinePen(line_pen_x)
+
+        chart.addAxis(axis_x, Qt.AlignBottom)      
         
         axis_y = QValueAxis()
         axis_y.setTickCount(7)
@@ -253,7 +273,15 @@ class JS06_Setting_Widget(QDialog):
         axis_y.setTitleText("Intensity")
         axis_y.setRange(0, 255)
         axis_y.setLabelsBrush(axisBrush)
-        axis_y.setTitleBrush(axisBrush)           
+        axis_y.setTitleBrush(axisBrush)
+        axis_y.setGridLinePen(QPen(QColor("gray")))           
+
+        # 왼쪽 선의 스타일 변경 
+        line_pen_y = axis_y.linePen()
+        line_pen_y.setColor(QColor("white"))  # 선의 색상을 변경할 수 있습니다.
+        line_pen_y.setWidth(2)  # 선의 굵기를 변경할 수 있습니다.
+        axis_y.setLinePen(line_pen_y)
+
         chart.addAxis(axis_y, Qt.AlignLeft)
         
         # Red Graph
@@ -612,6 +640,8 @@ class JS06_Setting_Widget(QDialog):
         
         imageLabel_1.setPixmap(QPixmap.fromImage(qImg))
         return imageLabel_1
+    
+    
 
     def no_data_print():
         return

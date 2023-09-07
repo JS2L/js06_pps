@@ -2,7 +2,7 @@ import os
 import pandas as pd
 # import js06_log
 
-save_path = os.path.join("D:/path_info")
+save_path = os.path.join("C:/path_info")
 file_path = os.path.join(f"{save_path}/path_info.csv")    
 # logger = js06_log.CreateLogger(__name__)
 
@@ -14,7 +14,7 @@ def init_data_path():
     except Exception as e:
         pass
     
-    data_path = [('D:/data', 'D:/images', 'D:/log', '192.168.100.132')]
+    data_path = [('C:/data', 'C:/images', 'C:/log', '192.168.100.132')]
     
     cols = ['data_path', 'image_path', 'log_path', 'camera_ip_path']
     path_info_df = pd.DataFrame(data_path, columns=cols)

@@ -16,15 +16,16 @@
   <property name="styleSheet">
    <string notr="true">#setting_dialog
 {
-	background-color:rgb(22,32,42);
+	background-color:white;
+	boder-radius: 5px;
 }</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>1230</x>
-     <y>1040</y>
-     <width>341</width>
+     <x>1350</x>
+     <y>960</y>
+     <width>171</width>
      <height>32</height>
     </rect>
    </property>
@@ -39,9 +40,9 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>20</y>
+     <y>29</y>
      <width>1200</width>
-     <height>70</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -90,15 +91,18 @@
    <property name="geometry">
     <rect>
      <x>1240</x>
-     <y>20</y>
+     <y>30</y>
      <width>291</width>
-     <height>271</height>
+     <height>261</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#km_mile_setting
 {
 	background-color:rgb(25,39,52);
+    border-radius:10px;
+	color:rgb(255,255,255);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 </string>
@@ -113,7 +117,7 @@
      <x>20</x>
      <y>600</y>
      <width>531</width>
-     <height>70</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="font">
@@ -143,8 +147,8 @@
     <rect>
      <x>570</x>
      <y>600</y>
-     <width>501</width>
-     <height>451</height>
+     <width>511</width>
+     <height>401</height>
     </rect>
    </property>
    <property name="font">
@@ -172,61 +176,56 @@
    <property name="geometry">
     <rect>
      <x>1090</x>
-     <y>670</y>
+     <y>610</y>
      <width>441</width>
-     <height>121</height>
+     <height>171</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>16</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">#alpha_value
 {
-	background-color:rgb(25,39,52);
+	background-color:white;
+    border-radius:10px;
+	color:black;
+    margin:20px;
 }
 
 </string>
    </property>
    <property name="text">
-    <string/>
+    <string>Ext Alpha Value</string>
    </property>
-  </widget>
-  <widget class="QLabel" name="ext_alpha_label">
-   <property name="geometry">
-    <rect>
-     <x>1090</x>
-     <y>600</y>
-     <width>441</width>
-     <height>70</height>
-    </rect>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
    </property>
-   <property name="font">
-    <font>
-     <family>NanumGothic</family>
-     <pointsize>25</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#ext_alpha_label
-{
-	background-color:rgb(27,49,70);
-	color:rgb(255,255,255);
-}</string>
-   </property>
-   <property name="text">
-    <string>  ext alpha value</string>
+   <property name="scaledContents">
+    <bool>false</bool>
    </property>
    <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="indent">
+    <number>10</number>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>670</y>
+     <y>660</y>
      <width>531</width>
-     <height>381</height>
+     <height>321</height>
     </rect>
    </property>
    <property name="font">
@@ -295,7 +294,7 @@
    <property name="geometry">
     <rect>
      <x>1340</x>
-     <y>220</y>
+     <y>210</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -328,13 +327,16 @@
      <x>1240</x>
      <y>310</y>
      <width>291</width>
-     <height>271</height>
+     <height>281</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">#km_mile_setting_2
 {
 	background-color:rgb(25,39,52);
+    border-radius:10px;
+	color:rgb(255,255,255);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 </string>
@@ -348,8 +350,8 @@
     <rect>
      <x>570</x>
      <y>600</y>
-     <width>501</width>
-     <height>451</height>
+     <width>511</width>
+     <height>401</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="html_verticalLayout">
@@ -364,22 +366,24 @@
   <widget class="QCheckBox" name="red_checkBox">
    <property name="geometry">
     <rect>
-     <x>1150</x>
-     <y>720</y>
+     <x>1160</x>
+     <y>690</y>
      <width>81</width>
      <height>16</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
+     <family>Arial Rounded MT Bold</family>
      <pointsize>14</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#red_checkBox
+    <string notr="true">#blue_checkBox
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
@@ -389,22 +393,24 @@
   <widget class="QCheckBox" name="green_checkBox">
    <property name="geometry">
     <rect>
-     <x>1270</x>
-     <y>720</y>
+     <x>1280</x>
+     <y>690</y>
      <width>81</width>
      <height>16</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
+     <family>Arial Rounded MT Bold</family>
      <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#green_checkBox
+    <string notr="true">#blue_checkBox
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
@@ -414,78 +420,28 @@
   <widget class="QCheckBox" name="blue_checkBox">
    <property name="geometry">
     <rect>
-     <x>1390</x>
-     <y>720</y>
+     <x>1400</x>
+     <y>690</y>
      <width>81</width>
      <height>16</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
+     <family>Arial Rounded MT Bold</family>
      <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">#blue_checkBox
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
     <string>    Blue</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="run_aver_label">
-   <property name="geometry">
-    <rect>
-     <x>1090</x>
-     <y>800</y>
-     <width>441</width>
-     <height>70</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>NanumGothic</family>
-     <pointsize>25</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#run_aver_label
-{
-	background-color:rgb(27,49,70);
-	color:rgb(255,255,255);
-}</string>
-   </property>
-   <property name="text">
-    <string>  Running average</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="runaver_value">
-   <property name="geometry">
-    <rect>
-     <x>1090</x>
-     <y>870</y>
-     <width>441</width>
-     <height>171</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#runaver_value
-{
-	background-color:rgb(25,39,52);
-}
-
-</string>
-   </property>
-   <property name="text">
-    <string/>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">
@@ -495,10 +451,16 @@
    <property name="geometry">
     <rect>
      <x>1090</x>
-     <y>870</y>
+     <y>790</y>
      <width>441</width>
-     <height>171</height>
+     <height>161</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#groupBox
+{
+	border: none;
+}</string>
    </property>
    <property name="title">
     <string/>
@@ -506,8 +468,8 @@
    <widget class="QRadioButton" name="one_radio_btn">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>70</y>
+      <x>70</x>
+      <y>80</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -521,7 +483,7 @@
     <property name="styleSheet">
      <string notr="true">#one_radio_btn
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
     </property>
     <property name="text">
@@ -531,33 +493,8 @@
    <widget class="QRadioButton" name="five_radio_btn">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>70</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#five_radio_btn
-{
-	color:rgb(255,255,255);
-}</string>
-    </property>
-    <property name="text">
-     <string>  5min</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="ten_radio_btn">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>70</y>
+      <x>190</x>
+      <y>80</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -571,13 +508,117 @@
     <property name="styleSheet">
      <string notr="true">#ten_radio_btn
 {
-	color:rgb(255,255,255);
+	color:black;
+}</string>
+    </property>
+    <property name="text">
+     <string>  5min</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="ten_radio_btn">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>80</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#ten_radio_btn
+{
+	color:black;
 }</string>
     </property>
     <property name="text">
      <string>  10min</string>
     </property>
    </widget>
+   <widget class="QLabel" name="runaver_value">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>441</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Rounded MT Bold</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#runaver_value
+{
+	background-color:white;
+    border-radius:10px;
+	color:black;
+    margin:20px;
+	border: 1px solid gray;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Running Average</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="running_ave_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>0</y>
+      <width>48</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+#running_ave_pushButton
+{
+	background-image: url(./ui/icon/running_ave.png);
+	border:0px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>runaver_value</zorder>
+   <zorder>ten_radio_btn</zorder>
+   <zorder>five_radio_btn</zorder>
+   <zorder>one_radio_btn</zorder>
+   <zorder>running_ave_pushButton</zorder>
   </widget>
   <widget class="QPushButton" name="target_table_pushButton">
    <property name="geometry">
@@ -616,8 +657,8 @@
   <widget class="QPushButton" name="ext_color_pushButton">
    <property name="geometry">
     <rect>
-     <x>1465</x>
-     <y>605</y>
+     <x>1470</x>
+     <y>610</y>
      <width>57</width>
      <height>57</height>
     </rect>
@@ -630,40 +671,6 @@
 #ext_color_pushButton
 {
 	background-image: url(./ui/icon/ext_color.png);
-	border:0px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-   <property name="default">
-    <bool>true</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="running_ave_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>1470</x>
-     <y>810</y>
-     <width>48</width>
-     <height>49</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-#running_ave_pushButton
-{
-	background-image: url(./ui/icon/running_ave.png);
 	border:0px;
 }
 </string>
@@ -851,9 +858,9 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>1480</x>
-     <y>373</y>
+     <y>370</y>
      <width>48</width>
-     <height>23</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -864,7 +871,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>1480</x>
-     <y>453</y>
+     <y>450</y>
      <width>48</width>
      <height>23</height>
     </rect>
@@ -877,7 +884,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>1480</x>
-     <y>533</y>
+     <y>530</y>
      <width>48</width>
      <height>23</height>
     </rect>
@@ -889,8 +896,8 @@ p, li { white-space: pre-wrap; }
   <widget class="QProgressBar" name="label_progressBar">
    <property name="geometry">
     <rect>
-     <x>1190</x>
-     <y>750</y>
+     <x>1200</x>
+     <y>720</y>
      <width>31</width>
      <height>10</height>
     </rect>
@@ -918,8 +925,8 @@ p, li { white-space: pre-wrap; }
   <widget class="QProgressBar" name="label_progressBar_2">
    <property name="geometry">
     <rect>
-     <x>1310</x>
-     <y>750</y>
+     <x>1320</x>
+     <y>720</y>
      <width>31</width>
      <height>10</height>
     </rect>
@@ -947,8 +954,8 @@ p, li { white-space: pre-wrap; }
   <widget class="QProgressBar" name="label_progressBar_3">
    <property name="geometry">
     <rect>
-     <x>1425</x>
-     <y>750</y>
+     <x>1435</x>
+     <y>720</y>
      <width>31</width>
      <height>10</height>
     </rect>
@@ -977,9 +984,9 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>670</y>
+     <y>660</y>
      <width>531</width>
-     <height>380</height>
+     <height>321</height>
     </rect>
    </property>
    <property name="font">
@@ -1000,6 +1007,7 @@ p, li { white-space: pre-wrap; }
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
+  <zorder>groupBox</zorder>
   <zorder>tableWidget</zorder>
   <zorder>no_target_label</zorder>
   <zorder>buttonBox</zorder>
@@ -1009,7 +1017,6 @@ p, li { white-space: pre-wrap; }
   <zorder>target_table_label</zorder>
   <zorder>no_graph_label</zorder>
   <zorder>alpha_value</zorder>
-  <zorder>ext_alpha_label</zorder>
   <zorder>km_radio_btn</zorder>
   <zorder>mile_radio_btn</zorder>
   <zorder>km_mile_setting_2</zorder>
@@ -1017,12 +1024,8 @@ p, li { white-space: pre-wrap; }
   <zorder>red_checkBox</zorder>
   <zorder>green_checkBox</zorder>
   <zorder>blue_checkBox</zorder>
-  <zorder>run_aver_label</zorder>
-  <zorder>runaver_value</zorder>
-  <zorder>groupBox</zorder>
   <zorder>target_table_pushButton</zorder>
   <zorder>ext_color_pushButton</zorder>
-  <zorder>running_ave_pushButton</zorder>
   <zorder>check_pushButton</zorder>
   <zorder>data_path_textEdit</zorder>
   <zorder>image_path_textEdit</zorder>

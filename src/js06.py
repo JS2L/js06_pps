@@ -50,7 +50,7 @@ class JS06MainWindow(QWidget):
         self.vis_list = []
         
         # JS06의 설정 정보들을 초기화 하거나 이미 있으면 패쓰
-        if os.path.isfile("./path_info/path_info.csv"):
+        if os.path.isfile("C:/path_info/path_info.csv"):
             pass        
         else:
             save_path_info.init_data_path()
@@ -64,7 +64,7 @@ class JS06MainWindow(QWidget):
         
   
         # 카메라 IP 주소, 계정, 비밀번호를 rtsp 문법 구조에 맞게 선언
-        VIDEO_SRC3 = f"rtsp://admin:sijung5520@{self.rtsp_path}/profile5/media.smp"        
+        VIDEO_SRC3 = f"rtsp://admin:sijung5520@{self.rtsp_path}/profile4/media.smp"        
         # VIDEO_SRC3 = f"rtsp://admin:sijung5520@121.149.204.221/profile2/media.smp"
         CAM_NAME = "PNM_9030RV"
         # 송수신 시작 함수
@@ -86,7 +86,7 @@ class JS06MainWindow(QWidget):
         # # 쓰레드 시작
         self.video_thread.start()
 
-        # 실제 지금 PC 시간을 출력
+        # 실제 지금 PC 시간을 출력w
         self.timer = QTimer()
         self.timer.start(1000)
         self.timer.timeout.connect(self.timeout_run)        
