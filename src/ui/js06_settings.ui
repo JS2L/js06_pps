@@ -40,28 +40,31 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>29</y>
-     <width>1200</width>
-     <height>61</height>
+     <y>30</y>
+     <width>221</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>NanumGothic</family>
-     <pointsize>25</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>20</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">#target_setting_label
 {
-	background-color:rgb(27,49,70);
-	color:rgb(28,136,227);
-}</string>
+	background-color:white;
+    border-radius:10px;
+	color:black;
+}
+
+</string>
    </property>
    <property name="text">
-    <string>  Target setting</string>
+    <string>  Target Setting</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -99,10 +102,9 @@
    <property name="styleSheet">
     <string notr="true">#km_mile_setting
 {
-	background-color:rgb(25,39,52);
+	background-color:white;
     border-radius:10px;
-	color:rgb(255,255,255);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+	color:black;
 }
 
 </string>
@@ -116,27 +118,30 @@
     <rect>
      <x>20</x>
      <y>600</y>
-     <width>531</width>
-     <height>61</height>
+     <width>201</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>NanumGothic</family>
-     <pointsize>25</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>20</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">#target_table_label
 {
-	background-color:rgb(27,49,70);
-	color:rgb(255,255,255);
-}</string>
+	background-color:white;
+    border-radius:10px;
+	color:black;
+}
+
+</string>
    </property>
    <property name="text">
-    <string>  Target table</string>
+    <string>  Target Table</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -273,14 +278,14 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
-     <pointsize>24</pointsize>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#km_radio_btn
+    <string notr="true">#mile_radio_btn
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
@@ -301,14 +306,14 @@
    </property>
    <property name="font">
     <font>
-     <family>Arial</family>
-     <pointsize>24</pointsize>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">#mile_radio_btn
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
@@ -333,11 +338,12 @@
    <property name="styleSheet">
     <string notr="true">#km_mile_setting_2
 {
-	background-color:rgb(25,39,52);
+	background-color:white;
     border-radius:10px;
-	color:rgb(255,255,255);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+	color:black;
 }
+
+
 
 </string>
    </property>
@@ -562,7 +568,6 @@
     border-radius:10px;
 	color:black;
     margin:20px;
-	border: 1px solid gray;
 }
 
 </string>
@@ -619,40 +624,6 @@
    <zorder>five_radio_btn</zorder>
    <zorder>one_radio_btn</zorder>
    <zorder>running_ave_pushButton</zorder>
-  </widget>
-  <widget class="QPushButton" name="target_table_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>610</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-#target_table_pushButton
-{
-	background-image: url(./ui/icon/target_table.png);
-	border:0px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="autoDefault">
-    <bool>true</bool>
-   </property>
-   <property name="default">
-    <bool>true</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
   </widget>
   <widget class="QPushButton" name="ext_color_pushButton">
    <property name="geometry">
@@ -784,16 +755,16 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
-     <family>나눔스퀘어 Bold</family>
+     <family>Arial Rounded MT Bold</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">#data_path_label
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
@@ -811,16 +782,16 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
-     <family>나눔스퀘어 Bold</family>
+     <family>Arial Rounded MT Bold</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#image_path_label
+    <string notr="true">#data_path_label
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
@@ -838,16 +809,16 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
-     <family>나눔스퀘어 Bold</family>
+     <family>Arial Rounded MT Bold</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">#log_path_label
+    <string notr="true">#data_path_label
 {
-	color:rgb(255,255,255);
+	color:black;
 }</string>
    </property>
    <property name="text">
@@ -998,6 +969,7 @@ p, li { white-space: pre-wrap; }
    <property name="styleSheet">
     <string notr="true">#no_target_label{
 	color:rgb(50,153,50);
+	background-color:white;
 }</string>
    </property>
    <property name="text">
@@ -1024,7 +996,6 @@ p, li { white-space: pre-wrap; }
   <zorder>red_checkBox</zorder>
   <zorder>green_checkBox</zorder>
   <zorder>blue_checkBox</zorder>
-  <zorder>target_table_pushButton</zorder>
   <zorder>ext_color_pushButton</zorder>
   <zorder>check_pushButton</zorder>
   <zorder>data_path_textEdit</zorder>

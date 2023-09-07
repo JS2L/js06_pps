@@ -141,7 +141,7 @@ class JS06_Setting_Widget(QDialog):
         self.ten_radio_btn.clicked.connect(self.running_avr_time_settings_function)
 
         # 그림자 효과를 적용할 위젯들을 리스트로 저장
-        widgets_to_apply_shadow = [self.alpha_value, self.runaver_value]
+        widgets_to_apply_shadow = [self.alpha_value, self.runaver_value, self.target_setting_label, self.km_mile_setting, self.km_mile_setting_2, self.target_table_label]
 
         # 반복문을 사용하여 그림자 효과를 적용
         for widget in widgets_to_apply_shadow:
@@ -247,7 +247,7 @@ class JS06_Setting_Widget(QDialog):
         
         chart.setTitle('Extinction coefficient Graph')
         
-        axisBrush = QBrush(QColor("white"))
+        axisBrush = QBrush(QColor("black"))
         
         # chart.createDefaultAxes()
         axis_x = QValueAxis()
@@ -261,7 +261,7 @@ class JS06_Setting_Widget(QDialog):
 
         # 아래쪽 선의 스타일 변경
         line_pen_x = axis_x.linePen()
-        line_pen_x.setColor(QColor("white"))  # 선의 색상을 변경할 수 있습니다.
+        line_pen_x.setColor(QColor("black"))  # 선의 색상을 변경할 수 있습니다.
         line_pen_x.setWidth(2)  # 선의 굵기를 변경할 수 있습니다.
         axis_x.setLinePen(line_pen_x)
 
@@ -278,7 +278,7 @@ class JS06_Setting_Widget(QDialog):
 
         # 왼쪽 선의 스타일 변경 
         line_pen_y = axis_y.linePen()
-        line_pen_y.setColor(QColor("white"))  # 선의 색상을 변경할 수 있습니다.
+        line_pen_y.setColor(QColor("black"))  # 선의 색상을 변경할 수 있습니다.
         line_pen_y.setWidth(2)  # 선의 굵기를 변경할 수 있습니다.
         axis_y.setLinePen(line_pen_y)
 
@@ -337,7 +337,7 @@ class JS06_Setting_Widget(QDialog):
         chart.legend().setLabelBrush(axisBrush)
         
         # displaying chart
-        chart.setBackgroundBrush(QBrush(QColor(22,32,42)))
+        chart.setBackgroundBrush(QBrush(QColor(255,255,255)))
         chart_view = QChartView(chart)
         chart_view.setRenderHint(QPainter.Antialiasing)
         
