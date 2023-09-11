@@ -141,7 +141,7 @@ class JS06_Setting_Widget(QDialog):
         self.ten_radio_btn.clicked.connect(self.running_avr_time_settings_function)
 
         # 그림자 효과를 적용할 위젯들을 리스트로 저장
-        widgets_to_apply_shadow = [self.alpha_value, self.runaver_value, self.target_setting_label, self.km_mile_setting, self.km_mile_setting_2, self.target_table_label]
+        widgets_to_apply_shadow = [self.alpha_value, self.runaver_value, self.target_setting_label, self.km_mile_setting, self.km_mile_setting_2, self.target_table_label, self.stroke_label]
 
         # 반복문을 사용하여 그림자 효과를 적용
         for widget in widgets_to_apply_shadow:
@@ -615,13 +615,13 @@ class JS06_Setting_Widget(QDialog):
             # target 번호 넣기
             item2 = QTableWidgetItem(f"Target_{i+1}")
             item2.setTextAlignment(Qt.AlignVCenter | Qt.AlignHCenter)
-            item2.setForeground(QBrush(QColor(255, 255, 255)))
+            item2.setForeground(QBrush(QColor(0, 0, 0)))
             self.tableWidget.setItem(i, 1, item2)
             
             # target 거리 넣기            
             item3 = QTableWidgetItem(f"{self.distance[i]}km")
             item3.setTextAlignment(Qt.AlignVCenter | Qt.AlignHCenter)
-            item3.setForeground(QBrush(QColor(255, 255, 255)))
+            item3.setForeground(QBrush(QColor(0, 0, 0)))
             self.tableWidget.setItem(i, 2, item3)
             
         self.logger.info(f'Show target table')

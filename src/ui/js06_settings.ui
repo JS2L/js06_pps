@@ -29,6 +29,15 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -241,7 +250,7 @@
    <property name="styleSheet">
     <string notr="true">#tableWidget
 {
-	background-color:rgb(25,39,52);
+	background-color:white;
 }
 
 </string>
@@ -401,7 +410,7 @@
     <rect>
      <x>1280</x>
      <y>690</y>
-     <width>81</width>
+     <width>91</width>
      <height>16</height>
     </rect>
    </property>
@@ -828,11 +837,39 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="data_path_pbtn">
    <property name="geometry">
     <rect>
-     <x>1480</x>
+     <x>1475</x>
      <y>370</y>
      <width>48</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 기본 스타일 */
+QPushButton {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Hover 효과 */
+QPushButton:hover {
+	cursor: pointer;
+    color: white;
+    background-color: qlineargradient(spread: reflect, x1: 1, y1: 0, x2: 0.995, y2: 1,
+        stop: 0 rgba(218, 218, 218, 255),
+        stop: 0.305419 rgba(0, 7, 11, 255),
+        stop: 0.935961 rgba(2, 11, 18, 255),
+        stop: 1 rgba(240, 240, 240, 255));
+    border: 1px solid black;
+    border-radius: 10px;
+}</string>
    </property>
    <property name="text">
     <string>File</string>
@@ -841,11 +878,39 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="image_path_pbtn">
    <property name="geometry">
     <rect>
-     <x>1480</x>
+     <x>1475</x>
      <y>450</y>
      <width>48</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 기본 스타일 */
+QPushButton {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Hover 효과 */
+QPushButton:hover {
+    color: white;
+    background-color: qlineargradient(spread: reflect, x1: 1, y1: 0, x2: 0.995, y2: 1,
+        stop: 0 rgba(218, 218, 218, 255),
+        stop: 0.305419 rgba(0, 7, 11, 255),
+        stop: 0.935961 rgba(2, 11, 18, 255),
+        stop: 1 rgba(240, 240, 240, 255));
+    border: 1px solid black;
+    border-radius: 10px;
+	cursor: pointer;
+}</string>
    </property>
    <property name="text">
     <string>File</string>
@@ -854,11 +919,39 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="log_path_pbtn">
    <property name="geometry">
     <rect>
-     <x>1480</x>
+     <x>1475</x>
      <y>530</y>
      <width>48</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Rounded MT Bold</family>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 기본 스타일 */
+QPushButton {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Hover 효과 */
+QPushButton:hover {
+    color: white;
+    background-color: qlineargradient(spread: reflect, x1: 1, y1: 0, x2: 0.995, y2: 1,
+        stop: 0 rgba(218, 218, 218, 255),
+        stop: 0.305419 rgba(0, 7, 11, 255),
+        stop: 0.935961 rgba(2, 11, 18, 255),
+        stop: 1 rgba(240, 240, 240, 255));
+    border: 1px solid black;
+    border-radius: 10px;
+	cursor: pointer;
+}</string>
    </property>
    <property name="text">
     <string>File</string>
@@ -979,12 +1072,31 @@ p, li { white-space: pre-wrap; }
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <zorder>groupBox</zorder>
+  <widget class="QLabel" name="stroke_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>1200</width>
+     <height>500</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#stroke_label{
+	background-color:white;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>tableWidget</zorder>
+  <zorder>stroke_label</zorder>
+  <zorder>target_setting_image_label</zorder>
+  <zorder>groupBox</zorder>
   <zorder>no_target_label</zorder>
   <zorder>buttonBox</zorder>
   <zorder>target_setting_label</zorder>
-  <zorder>target_setting_image_label</zorder>
   <zorder>km_mile_setting</zorder>
   <zorder>target_table_label</zorder>
   <zorder>no_graph_label</zorder>

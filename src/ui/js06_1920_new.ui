@@ -198,7 +198,7 @@
   <widget class="QPushButton" name="clock_pushButton">
    <property name="geometry">
     <rect>
-     <x>1830</x>
+     <x>1110</x>
      <y>670</y>
      <width>54</width>
      <height>54</height>
@@ -232,9 +232,9 @@
   <widget class="QLabel" name="real_time_label">
    <property name="geometry">
     <rect>
-     <x>920</x>
+     <x>1150</x>
      <y>650</y>
-     <width>981</width>
+     <width>451</width>
      <height>91</height>
     </rect>
    </property>
@@ -248,11 +248,13 @@
    </property>
    <property name="styleSheet">
     <string notr="true">#real_time_label
-{
-	background-color:rgb(25,39,52);
-	color:rgb(220,220,220);
-
+	{
+	background-color:white;
+    border-radius:10px;
+	color:black;
+    margin:20px;
 }
+
 </string>
    </property>
    <property name="text">
@@ -297,9 +299,9 @@
    <property name="geometry">
     <rect>
      <x>920</x>
-     <y>840</y>
+     <y>749</y>
      <width>451</width>
-     <height>220</height>
+     <height>311</height>
     </rect>
    </property>
    <property name="font">
@@ -388,9 +390,9 @@
    <property name="geometry">
     <rect>
      <x>1380</x>
-     <y>840</y>
+     <y>749</y>
      <width>521</width>
-     <height>220</height>
+     <height>311</height>
     </rect>
    </property>
    <property name="font">
@@ -643,14 +645,14 @@
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <zorder>c_vis_title_label</zorder>
+  <zorder>c_vis_label</zorder>
   <zorder>title_label</zorder>
+  <zorder>c_vis_title_label</zorder>
   <zorder>settings_button</zorder>
   <zorder>image_label</zorder>
   <zorder>visibility_label</zorder>
   <zorder>graph_label</zorder>
   <zorder>real_time_label</zorder>
-  <zorder>c_vis_label</zorder>
   <zorder>verticalLayoutWidget</zorder>
   <zorder>verticalLayoutWidget_2</zorder>
   <zorder>c_pm_label</zorder>
